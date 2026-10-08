@@ -19,7 +19,7 @@ Kept on that basis, and changed for research:
 | Phase 1 rebuilt around silent ML failures: tiny-batch overfit, determinism check, reference diff, invariants, visual dump plus a number. Trigger narrowed to hard bugs. A new close-out step names results that need re-running. | `diagnosing-bugs` |
 | Replaces upstream `tdd`. No full red-green-refactor; tests only where a silent error changes results (metrics, coordinate transforms, splits, preprocessing, losses), with independent oracles and Python examples. | `correctness-tests` |
 | Now user-invoked. The Spec axis accepts a paper's method section or an experiment plan and checks splits, preprocessing, settings and metric computation against it. No issue tracker required. | `code-review` |
-| Patterns hardened (`git clean -xfd`, `git checkout -- <file>`, `git stash drop`, `git -C <dir> ...`) because research repos keep untracked results and checkpoints next to the code. | `git-guardrails-claude-code` |
+| Gates only operations with no undo and asks you to approve them instead of refusing outright; patterns cover `git clean -xfd`, `git checkout -- <file>`, `git stash drop`, force push and `git -C <dir> ...`, because research repos keep untracked results and checkpoints next to the code. | `git-guardrails-claude-code` |
 | Evaluation-protocol decisions called out as prime ADR material. | `domain-modeling` |
 | Written for a reader in another harness or on another model. | `handoff` |
 | Writes for a recipient in another field (a clinician answering an ML question). | `to-questionnaire` |
@@ -82,7 +82,7 @@ claude plugin install research-skills@hsiangyuzhao
 
 - **[diagnosing-bugs](./skills/engineering/diagnosing-bugs/SKILL.md)** _(core)_: Diagnosis loop for hard and silent bugs in research code: build a fast signal that goes red on this bug, minimise, hypothesise, instrument, fix with a regression test, and name any results that need re-running.
 - **[domain-modeling](./skills/engineering/domain-modeling/SKILL.md)** _(core)_: Build and sharpen the project's vocabulary and record hard-to-reverse decisions (evaluation protocol above all) in `GLOSSARY.md` and ADRs.
-- **[git-guardrails-claude-code](./skills/engineering/git-guardrails-claude-code/SKILL.md)** _(core)_: Install a Claude Code hook that blocks git commands which destroy work: push, hard reset, clean, discarding uncommitted changes, dropping stashes.
+- **[git-guardrails-claude-code](./skills/engineering/git-guardrails-claude-code/SKILL.md)** _(core)_: Install a Claude Code hook that stops git commands with no undo (clean, hard reset, discarding uncommitted changes, dropping stashes, force push) and asks you to approve each one.
 - **[correctness-tests](./skills/engineering/correctness-tests/SKILL.md)**: The few tests research code needs, at seams where a silent error changes results, each checked against an independent oracle.
 - **[codebase-design](./skills/engineering/codebase-design/SKILL.md)**: Shared vocabulary for designing deep modules: a lot of behaviour behind a small interface, at a clean seam, testable through that interface.
 

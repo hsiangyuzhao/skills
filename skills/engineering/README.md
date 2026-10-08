@@ -16,6 +16,6 @@ Model- or user-reachable (rich trigger phrasing so the model can reach for them)
 
 - **[diagnosing-bugs](./diagnosing-bugs/SKILL.md)**: Diagnosis loop for hard and silent bugs in research code: a fast signal that goes red on this bug, then minimise, hypothesise, instrument, fix, and name results that need re-running.
 - **[domain-modeling](./domain-modeling/SKILL.md)**: Build and sharpen the project's vocabulary and record hard-to-reverse decisions in `GLOSSARY.md` and ADRs.
-- **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)**: Install a Claude Code hook that blocks git commands which destroy work.
+- **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)**: Install a Claude Code hook that asks for your approval before any git command with no undo.
 - **[correctness-tests](./correctness-tests/SKILL.md)**: The few tests research code needs, at seams where a silent error changes results, each checked against an independent oracle.
 - **[codebase-design](./codebase-design/SKILL.md)**: Shared vocabulary for designing deep modules: small interfaces, clean seams, testable through the interface.
