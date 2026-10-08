@@ -1,21 +1,21 @@
 {
-  "name": "mattpocock",
+  "name": "hsiangyuzhao",
   "owner": {
-    "name": "Matt Pocock",
-    "url": "https://www.aihero.dev"
+    "name": "Xiangyu Zhao",
+    "url": "https://github.com/hsiangyuzhao"
   },
-  "description": "Matt Pocock's skills for real engineering, as an installable Claude Code plugin.",
+  "description": "Agent skills for research code, as an installable Claude Code plugin.",
   "plugins": [
     {
-      "name": "mattpocock-skills",
+      "name": "research-skills",
       "source": "./",
-      "description": "Matt Pocock's agent skills for real engineering (grilling, spec/ticket flows, TDD, code review, domain modelling and more).",
-      "category": "engineering",
+      "description": "Agent skills for research code: grilling, silent-bug diagnosis, correctness tests, domain modelling, code review against a paper's method, git guardrails.",
+      "category": "productivity",
       "keywords": [
-        "engineering",
-        "skills",
-        "tdd",
-        "code-review",
+        "research",
+        "machine-learning",
+        "debugging",
+        "testing",
         "grilling"
       ]
     }

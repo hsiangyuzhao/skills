@@ -72,3 +72,9 @@ Only offer to create an ADR when all three are true:
 3. **The result of a real trade-off**: there were genuine alternatives and you picked one for specific reasons
 
 If any of the three is missing, skip the ADR. Use the format in [ADR-FORMAT.md](./ADR-FORMAT.md).
+
+In research repos the decisions that most often pass all three are about the **evaluation protocol**: how splits are made (and at which level, sample or subject), how a label or outcome is defined, which samples are excluded and why, which coordinate frame or resolution is canonical, how a metric handles edge cases. These are also the decisions a methods section and a reviewer will ask about, so recording them pays twice.
+
+### Keep governed data out
+
+`GLOSSARY.md` and ADRs are committed and shared. They hold definitions and decisions, never data: no participant identifiers, no individual records, no raw clinical values, nothing a data use agreement would stop you publishing. Describe a cohort by its criteria and counts, not by its members.
